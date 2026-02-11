@@ -208,7 +208,7 @@ This project is open source and available for educational purposes.
 ---
 <div align="center">
 
-### Built with 💜 for IITM BS Students
+### Built for IITM BS Students
 
 **Making academic planning easier!**
 
