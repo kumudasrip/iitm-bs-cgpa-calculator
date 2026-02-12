@@ -2,6 +2,13 @@
 
 A fully functional CGPA calculator and future grade prediction system for IIT Madras BS Degree programs.
 
+---
+
+## 🔗 Live Demo
+
+https://iitm-bs-cgpa-calc.vercel.app/
+
+---
 
 ## 🎯 Features
 
