@@ -242,52 +242,52 @@ export default function CGPACalculator() {
 
       {/* Info Modal */}
       {showInfo && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={() => setShowInfo(false)}>
-          <div className="bg-gradient-to-br from-[#1a0a2e] to-[#0a0a0f] border border-purple-500/30 rounded-2xl p-8 max-w-lg w-full shadow-2xl" onClick={(e) => e.stopPropagation()}>
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-2xl font-bold text-white flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 bg-black/60 backdrop-blur-sm" onClick={() => setShowInfo(false)}>
+          <div className="bg-gradient-to-br from-[#1a0a2e] to-[#0a0a0f] border border-purple-500/30 rounded-2xl p-5 md:p-8 max-w-lg w-full shadow-2xl max-h-[85vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between mb-3 md:mb-6">
+              <h3 className="text-lg md:text-2xl font-bold text-white flex items-center gap-2 md:gap-3">
+                <div className="w-7 h-7 md:w-10 md:h-10 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 md:w-6 md:h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                How to Use
+                <span>How to Use</span>
               </h3>
               <button
                 onClick={() => setShowInfo(false)}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white transition-colors flex-shrink-0"
               >
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
             
-            <div className="space-y-4 text-gray-300">
-              <div className="flex gap-3">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-sm">1</div>
-                <p><strong className="text-white">Select your program and level:</strong> Choose between BS in Data Science or Electronic Systems, then select your current level (Foundation/Diploma/Degree).</p>
+            <div className="space-y-2.5 md:space-y-4 text-xs md:text-base text-gray-300">
+              <div className="flex gap-2 md:gap-3">
+                <div className="flex-shrink-0 w-5 h-5 md:w-6 md:h-6 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-xs">1</div>
+                <p className="leading-relaxed text-[13px] md:text-base"><strong className="text-white">Select program & level:</strong> Choose BS in Data Science or Electronic Systems, then pick Foundation/Diploma/Degree.</p>
               </div>
               
-              <div className="flex gap-3">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-sm">2</div>
-                <p><strong className="text-white">Enter your grades:</strong> For each course, select the status (Completed/Ongoing/Future) and choose your grade. The CGPA updates automatically!</p>
+              <div className="flex gap-2 md:gap-3">
+                <div className="flex-shrink-0 w-5 h-5 md:w-6 md:h-6 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-xs">2</div>
+                <p className="leading-relaxed text-[13px] md:text-base"><strong className="text-white">Enter grades:</strong> Select status (Completed/Ongoing/Future) and grade for each course. CGPA updates automatically!</p>
               </div>
               
-              <div className="flex gap-3">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-sm">3</div>
-                <p><strong className="text-white">View predictions:</strong> See three CGPAs - Current (completed only), With Ongoing (including current semester), and Future Projection (with planned courses).</p>
+              <div className="flex gap-2 md:gap-3">
+                <div className="flex-shrink-0 w-5 h-5 md:w-6 md:h-6 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-xs">3</div>
+                <p className="leading-relaxed text-[13px] md:text-base"><strong className="text-white">View predictions:</strong> See Current CGPA, With Ongoing, and Future Projection.</p>
               </div>
               
-              <div className="flex gap-3">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-sm">4</div>
-                <p><strong className="text-white">Customize:</strong> Add custom courses with the "Add Custom Course" button. Remove any course using the trash icon in the Actions column.</p>
+              <div className="flex gap-2 md:gap-3">
+                <div className="flex-shrink-0 w-5 h-5 md:w-6 md:h-6 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-xs">4</div>
+                <p className="leading-relaxed text-[13px] md:text-base"><strong className="text-white">Customize:</strong> Add custom courses or remove any using the trash icon.</p>
               </div>
             </div>
             
             <button
               onClick={() => setShowInfo(false)}
-              className="mt-8 w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-500 hover:to-violet-500 rounded-xl font-medium transition-all"
+              className="mt-5 md:mt-8 w-full px-6 py-2.5 md:py-3 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-500 hover:to-violet-500 rounded-xl font-medium transition-all text-sm md:text-base"
             >
               Got it!
             </button>
